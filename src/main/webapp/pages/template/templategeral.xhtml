@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"   
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>    
+        <ui:insert name="title">
+            <title>ACCPORTAL - Sistema Integrado do Portal Accenture</title>
+        </ui:insert>
+        
+        <link rel="StyleSheet" type="text/css" href="../../css/style.css" />
+        <link rel="StyleSheet" type="text/css" href="../../css/bootstrap.css" />
+        
+        
+        
+        <h:outputScript library="../../resources/js" name="pt.js" />
+        
+        <ui:insert name="head" />
+    </h:head>
+
+    <h:body>
+        
+        <p:ajaxStatus onstart="statusDialog.show();" onsuccess="statusDialog.hide();" />
+        <p:dialog id="myDialogId" styleClass="process_msg" modal="true" showHeader="true"
+            header="Processando..." style="width:40px; height:20px; border:0;"
+            resizable="false" widgetVar="statusDialog" draggable="false" closable="false">          
+            <center><p:graphicImage value="../../imgs/ajax_loading_bar.gif" /></center>
+        </p:dialog>
+                
+        <div class="wrapper">
+
+            <header class="header">
+                <div>
+                    <p:graphicImage value="" styleClass="logo" />
+                </div>
+                
+                <div class="headerText">
+                    TESTE<br />
+                   ACCTESTE - Sistema Integrado do Portal TESTE<br />
+                </div>   
+                
+                <div class="versao">
+                    ACCPORTAL - TESTE
+                </div>  
+            </header><!-- .header-->
+
+            <main class="content">
+                
+                <ui:insert name="avisos" />
+                
+                <ui:insert name="body" />
+                
+            </main><!-- .content -->
+
+        </div><!-- .wrapper -->
+
+        <footer class="footer">
+            <div class="connect">
+                <a href="" target="_blank">
+                    <img src="../../imgs/facebook.png" /></a> 
+                <a href="https://twitter.com/accenture" target="_blank">
+                    <img src="" /></a>      
+            </div>
+            
+            <div class="direito">
+                © 2017 ACCPORTAL (Diretoria de Tecnologia da Informaçao). Todos os direitos reservados.
+            </div>
+        </footer><!-- .footer -->
+
+    </h:body>
+</html>
