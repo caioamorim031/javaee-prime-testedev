@@ -20,23 +20,22 @@
 			      FAIXA 1
 				      <h:panelGrid columns="3">
 				      
-						<p:inputNumber id="valor1" value="" required="true" requiredMessage="Informe o valor" placeholder="Valor 1" size="7"/> -
-						<p:inputNumber id="valor2" value="" required="true" requiredMessage="Informe o valor" placeholder="Valor 2" size="7"/><br/> 
+						<p:inputNumber id="valor1" value="#{intersecaoBean.valor1}" required="true" requiredMessage="Informe o valor" placeholder="Valor 1" size="7"/> -
+						<p:inputNumber id="valor2" value="#{intersecaoBean.valor2}" required="true" requiredMessage="Informe o valor" placeholder="Valor 2" size="7"/><br/> 
 					</h:panelGrid>
 			      </div>
 			      <div class="panel-content">
 			      FAIXA 2
 				      <h:panelGrid columns="3">
 				      
-						<p:inputNumber id="valor3" value="" required="true" requiredMessage="Informe o valor" placeholder="Valor 3" size="7"/> -
-						<p:inputNumber id="valor4" value="" required="true" requiredMessage="Informe o valor" placeholder="Valor 4" size="7"/><br/> 
+						<p:inputNumber id="valor3" value="#{intersecaoBean.valor3}" required="true" requiredMessage="Informe o valor" placeholder="Valor 3" size="7"/> -
+						<p:inputNumber id="valor4" value="#{intersecaoBean.valor4}" required="true" requiredMessage="Informe o valor" placeholder="Valor 4" size="7"/><br/> 
 					</h:panelGrid>
 			      </div>
 			    </div>
 			    
-			    
-				
-				<h:commandButton id="submit-button" value="Submit" action="#"/>
+				<h:commandButton id="submit-button" value="Enviar" action="#{intersecaoBean.verificarIntersecao()}"
+					styleClass="btn btn-primary"/>
 			</center>
 			
 			

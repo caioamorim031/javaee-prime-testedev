@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="../template/templategeral.xhtml">
+
+	<ui:define name="body">
+
+		<h:form id="form">
+
+			<p:growl id="growl" showDetail="false" />
+
+
+			<center style="padding-top: 140px;">
+				
+		<h:panelGrid columns="1">
+			<h:form>
+			<h:outputLabel>Valor:</h:outputLabel>
+			<p:inputNumber decimalPlaces="2"/>
+			<br />
+
+			<h:outputLabel for="Id">Descrição:</h:outputLabel>
+			<p:inputTextarea maxlength="255"/>
+			<br/>
+		</h:form>
+		</h:panelGrid>
+			</center>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+</html>

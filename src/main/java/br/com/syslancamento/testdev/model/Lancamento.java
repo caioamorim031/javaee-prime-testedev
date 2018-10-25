@@ -1,4 +1,4 @@
-package br.com.sislancamento;
+package br.com.syslancamento.testdev.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Calendar;
@@ -16,11 +16,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import br.com.lacqua.model.Lancamento;
+import br.com.syslancamento.testdev.model.Lancamento;
 
 @Entity
 @Table(name = "lancamento")
-public class Item implements Serializable {
+public class Lancamento implements Serializable {
 
 	
 	/**
@@ -42,15 +42,15 @@ public class Item implements Serializable {
 	private Calendar dataFinal;
 	
 	@Column(name = "vl_total", nullable = false)
-	private BigDecimal valorTotal;
+	private int valorTotal;
 	
 	@Column(name = "observacao", nullable = true, length = 1000)
 	private String observacao;
 
 	@ManyToMany
-	@JoinTable(name = "LancamentoItem", joinColumns = { @JoinColumn(name = "oid") }, inverseJoinColumns = {
-			@JoinColumn(name = "oid") })
-	private List<Lancamento> lancamentos;
+	@JoinTable(name = "lancamento_item", joinColumns = { @JoinColumn(name = "oid_lancamento") }, inverseJoinColumns = {
+			@JoinColumn(name = "oid_item") })
+	private List<Item> item;
 
 	public Integer getOid() {
 		return oid;
@@ -92,11 +92,11 @@ public class Item implements Serializable {
 		this.observacao = observacao;
 	}
 
-	public List<Lancamento> getLancamentos() {
-		return lancamentos;
+	public List<Item> getItem() {
+		return this.item;
 	}
 
-	public void setLancamentos(List<Lancamento> lancamentos) {
-		this.lancamentos = lancamentos;
+	public void setItem(List<Item> item) {
+		this.item = item;
 	}
 }

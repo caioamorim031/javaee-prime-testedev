@@ -1,4 +1,4 @@
-package br.com.sislancamento;
+package br.com.syslancamento.testdev.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,8 +12,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "LANCAMENTO")
-public class Lancamento implements Serializable {
+@Table(name = "item")
+public class Item implements Serializable {
 	
 	/**
 	 * 
@@ -31,8 +31,8 @@ public class Lancamento implements Serializable {
 	@Column(name = "valor", nullable = false, precision = 8, scale = 2)
 	private BigDecimal valor;
 	
-	@ManyToMany(mappedBy = "lancamentos")
-	private List<Item> itens;
+	@ManyToMany(mappedBy = "item")
+	private List<Lancamento> lancamentos;
 
 	public Integer getOid() {
 		return oid;
@@ -58,11 +58,11 @@ public class Lancamento implements Serializable {
 		this.valor = valor;
 	}
 
-	public List<Item> getItens() {
-		return itens;
+	public List<Lancamento> getLancamentos() {
+		return lancamentos;
 	}
 
-	public void setItens(List<Item> itens) {
-		this.itens = itens;
+	public void setLancamentos(List<Lancamento> lancamentos) {
+		this.lancamentos = lancamentos;
 	}
 }
