@@ -13,9 +13,7 @@
         <link rel="StyleSheet" type="text/css" href="../../css/style.css" />
         <link rel="StyleSheet" type="text/css" href="../../css/bootstrap.css" />
         
-        
-        
-        <h:outputScript library="../../resources/js" name="pt.js" />
+        <h:outputScript library="js" name="pt.js" />
         
         <ui:insert name="head" />
     </h:head>
@@ -37,16 +35,34 @@
                 </div>
                 
                 <div class="headerText">
-                    TESTE<br />
-                   ACCTESTE - Sistema Integrado do Portal TESTE<br />
+                    TESTEDEV<br />
+                   SysLancamento - Sistema TESTE<br />
                 </div>   
                 
                 <div class="versao">
-                    ACCPORTAL - TESTE
+                    SYSLANCAMENTO - TESTEDEV
                 </div>  
             </header><!-- .header-->
 
             <main class="content">
+                <h:form id="formMenu">           
+	                <!-- Navigation -->
+					<p:menubar autoDisplay="true" styleClass="menu">
+						<p:submenu 
+							action="#"
+							icon="add" >
+							
+							<p:menuitem value="Lançamento" url="" />
+							<p:menuitem value="Item" url="" />
+							
+						</p:submenu>
+								
+		
+						<p:menuitem value="Interseção de Valores" style="float:center;"
+							url="intersecao.faces?faces-redirect=true" ajax="false" />
+		
+					</p:menubar>
+                </h:form>
                 
                 <ui:insert name="avisos" />
                 
@@ -57,15 +73,9 @@
         </div><!-- .wrapper -->
 
         <footer class="footer">
-            <div class="connect">
-                <a href="" target="_blank">
-                    <img src="../../imgs/facebook.png" /></a> 
-                <a href="https://twitter.com/accenture" target="_blank">
-                    <img src="" /></a>      
-            </div>
             
             <div class="direito">
-                © 2017 ACCPORTAL (Diretoria de Tecnologia da Informaçao). Todos os direitos reservados.
+                © 2018 TESTEDEV 
             </div>
         </footer><!-- .footer -->
 
